@@ -14,7 +14,7 @@ class Item extends StatelessWidget {
       onTap: () => Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const AboutPage(),
+          builder: (context) => AboutPage(item),
         ),
       ),
       child: Stack(
