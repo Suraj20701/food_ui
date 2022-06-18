@@ -12,21 +12,22 @@ class ItemList extends StatefulWidget {
 }
 
 class _ItemListState extends State<ItemList> {
-  List<RecipieItem> itemList = ItemModel.RecipieItems;
+  List<RecipieItem> items = ItemModel.RecipieItems;
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Wrap(
-        spacing: 60,
-        runSpacing: 20,
-        alignment: WrapAlignment.spaceEvenly,
-        runAlignment: WrapAlignment.spaceEvenly,
-        children: [
-          Item(),
-          Item(),
-          Item(),
-          Item(),
-        ],
+      child: GridView.extent(
+        childAspectRatio: 0.8,
+        scrollDirection: Axis.vertical,
+        maxCrossAxisExtent: 200,
+        mainAxisSpacing: 20,
+        crossAxisSpacing: 20,
+        padding: const EdgeInsets.only(left: 18),
+        // shrinkWrap: true,
+        children: List.generate(
+          items.length,
+          (index) => Item(items[index]),
+        ),
       ),
     );
   }
