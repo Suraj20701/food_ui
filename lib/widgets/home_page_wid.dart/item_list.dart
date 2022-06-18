@@ -12,7 +12,7 @@ class ItemList extends StatefulWidget {
 }
 
 class _ItemListState extends State<ItemList> {
-  List<RecipieItem> items = ItemModel.RecipieItems;
+  List<RecipieItem> items = ItemModel.recipieItems;
   @override
   Widget build(BuildContext context) {
     return Expanded(

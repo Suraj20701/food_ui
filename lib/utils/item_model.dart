@@ -1,8 +1,8 @@
 class ItemModel {
-  static List<RecipieItem> RecipieItems = [
+  static List<RecipieItem> recipieItems = [
     RecipieItem(
         imgUrl: "images/img1.png",
-        item: RecipieItemInfo(
+        itemInfo: RecipieItemInfo(
           name: "Acocodo Salad",
           min: "12",
           kal: "20",
@@ -14,7 +14,7 @@ class ItemModel {
         )),
     RecipieItem(
         imgUrl: "images/img2.png",
-        item: RecipieItemInfo(
+        itemInfo: RecipieItemInfo(
           name: "Corn Soup",
           min: "45",
           kal: "20",
@@ -26,7 +26,7 @@ class ItemModel {
         )),
     RecipieItem(
         imgUrl: "images/img3.png",
-        item: RecipieItemInfo(
+        itemInfo: RecipieItemInfo(
           name: "Vegitable Salad",
           min: "12",
           kal: "30",
@@ -38,7 +38,7 @@ class ItemModel {
         )),
     RecipieItem(
         imgUrl: "images/img4.png",
-        item: RecipieItemInfo(
+        itemInfo: RecipieItemInfo(
           name: "Salmon Steam",
           min: "30",
           kal: "27",
@@ -50,7 +50,7 @@ class ItemModel {
         )),
     RecipieItem(
         imgUrl: "images/img5.png",
-        item: RecipieItemInfo(
+        itemInfo: RecipieItemInfo(
           name: "Steam Salman",
           min: "15",
           kal: "25",
@@ -65,8 +65,8 @@ class ItemModel {
 
 class RecipieItem {
   String imgUrl;
-  RecipieItemInfo item;
-  RecipieItem({required this.imgUrl, required this.item});
+  RecipieItemInfo itemInfo;
+  RecipieItem({required this.imgUrl, required this.itemInfo});
 }
 
 class RecipieItemInfo {

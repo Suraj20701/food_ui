@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
 class ItemName extends StatelessWidget {
-  const ItemName({
+  final String name;
+  const ItemName(
+    this.name, {
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      "Acocado Salad",
+      name,
       style: Theme.of(context).textTheme.headline2,
     );
   }

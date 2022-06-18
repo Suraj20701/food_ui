@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:food_ui/utils/item_model.dart';
 import 'package:food_ui/widgets/home_page_wid.dart/item_name.dart';
 import 'package:food_ui/widgets/home_page_wid.dart/item_about.dart';
 
 class ItemInfo extends StatelessWidget {
-  const ItemInfo({
+  final RecipieItemInfo itemInfo;
+  const ItemInfo(
+    this.itemInfo, {
     Key? key,
   }) : super(key: key);
 
@@ -23,20 +26,23 @@ class ItemInfo extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Colors.red.shade800,
-            offset: Offset(2, 2),
+            offset: const Offset(2, 2),
             blurRadius: 8,
           ),
           BoxShadow(
             color: Colors.grey.shade800,
-            offset: Offset(2, 2),
+            offset: const Offset(2, 2),
             blurRadius: 2,
           ),
         ],
       ),
       child: Column(
-        children: const [
-          ItemName(),
-          AboutItem(),
+        children: [
+          ItemName(itemInfo.name),
+          AboutItem(
+            time: itemInfo.min,
+            kal: itemInfo.kal,
+          ),
         ],
       ),
     );

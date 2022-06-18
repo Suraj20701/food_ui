@@ -11,7 +11,7 @@ class AboutPage extends StatelessWidget {
           centerTitle: true,
           elevation: 0,
           title: const Text("About Page"),
-          actions: [Icon(Icons.bookmark)],
+          actions: const [Icon(Icons.bookmark)],
         ),
         body: Stack(
           children: [
@@ -58,7 +58,7 @@ class AboutPage extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 325),
+              margin: const EdgeInsets.only(top: 325),
               height: 500,
               decoration: const BoxDecoration(
                 color: Colors.white,

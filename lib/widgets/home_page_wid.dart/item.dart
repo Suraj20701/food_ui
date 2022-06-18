@@ -19,7 +19,7 @@ class Item extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          const ItemInfo(),
+          ItemInfo(item.itemInfo),
           Positioned(left: 22, child: ItemPic(item.imgUrl)),
         ],
       ),
