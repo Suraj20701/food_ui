@@ -1,5 +1,5 @@
 # Food Ui
-   Flutter project to create ui.
+   Flutter project to create ui. Food UI.
 
 ## UI Screenshots
 <center>
